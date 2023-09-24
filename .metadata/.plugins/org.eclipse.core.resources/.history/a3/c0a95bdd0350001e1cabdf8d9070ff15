@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Ejercicio2 {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public <E> ArrayList<E> Intercalar (ArrayList<E> lista, ArrayList<E> lista2){
+		ArrayList<E> ListaToreturn = new ArrayList<E>(lista);
+			for(int i=0; i<ListaToreturn.size(); i++)
+				if(i%2==0)
+					ListaToreturn.add(i, lista.get(i));
+		
+		
+	}
+
+}

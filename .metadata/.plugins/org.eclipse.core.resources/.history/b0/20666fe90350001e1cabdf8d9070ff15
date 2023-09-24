@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class Ejercicio2 {
+
+
+	public static void main(String[] args) {
+		System.out.println(1%2);
+
+	}
+	
+	public <E> ArrayList<E> Intercalar (ArrayList<E> lista, ArrayList<E> lista2){
+		ArrayList<E> ListaToreturn = new ArrayList<E>(lista.size()+lista2.size());
+			int listaindex = 0;
+			int lista2index = 0;
+			
+			for(int i=0; i<ListaToreturn.size(); i++)
+				if(lista.get(listaindex) != null && lista2.get(lista2index) != null )
+					if()
+				
+		
+		
+	}
+
+}

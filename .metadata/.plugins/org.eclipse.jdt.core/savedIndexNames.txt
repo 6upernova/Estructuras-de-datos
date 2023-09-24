@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+/home/noah/Documents/Estructuras-de-datos/.metadata/.plugins/org.eclipse.jdt.core
+180350439.index
+1057112212.index
+616615867.index
+474141148.index
+1193025327.index
+3507233208.index
+1865797976.index

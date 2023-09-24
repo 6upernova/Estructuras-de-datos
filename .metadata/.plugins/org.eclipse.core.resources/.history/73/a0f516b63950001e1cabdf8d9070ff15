@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Ejercicio2 {
+
+
+	public static void main(String[] args) {
+		
+		
+		ArrayList<Integer> lista1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4));
+		ArrayList<Integer> lista2 = new ArrayList<Integer>(Arrays.asList(5,6,7));
+		System.out.println(Intercalar(lista1,lista2));
+		
+		
+
+	}
+	
+	public  <E> ArrayList<E> Intercalar (ArrayList<E> lista, ArrayList<E> lista2){
+		
+		ArrayList<E> ListaToreturn = new ArrayList<E>(lista.size()+lista2.size());
+		int listaindex = 0;
+		int lista2index = 0;
+		int i = 0;
+		
+		while(lista.size()>listaindex && lista2.size()>lista2index) {
+			if(i%2 == 0) {
+				ListaToreturn.add(lista.get(listaindex));
+				listaindex++;
+			}
+			else { 
+				ListaToreturn.add(lista2.get(lista2index));
+				lista2index++;
+			}
+			
+			i++;	
+		}
+		if(lista.size() > listaindex)
+			for(int j=listaindex ; j<lista.size(); j++)
+				ListaToreturn.add(lista.get(j));
+			
+		if(lista2.size() > lista2index)
+			for(int l=lista2index; l<lista2.size(); l++)
+				ListaToreturn.add(lista2.get(l));
+		
+		return ListaToreturn;
+	}
+	
+	public 
+
+}

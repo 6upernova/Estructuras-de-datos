@@ -1,0 +1,38 @@
+package Conjuntos;
+
+public class ConjuntoArreglo<E> {
+
+	protected E[] conj;
+	
+	public ConjuntoArreglo(int max) {
+		conj=(E[]) new Object[max];
+	}
+	
+	public int size() {
+		int cont=0;
+		for(int i=0; i<capacity(); i++)
+			if(conj[i]!=null)
+				cont++;
+		return cont;
+	}
+	
+	public int capacity() {
+		return conj.length;
+	}
+	
+	public boolean isempty() {
+		boolean estavacio=true;
+		for(int i=0; i<capacity() && estavacio; i++)
+			if(conj[i]!=null)
+				estavacio=false;
+		return estavacio;
+	}
+	
+	public E get(int i) {
+		return conj[i];	
+	}
+	
+	public 
+	
+	
+}
