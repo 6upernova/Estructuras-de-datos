@@ -1,15 +1,17 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Stack;
+import java.util.Collections;
 
 public class Ejercicio3y4{
 
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> lista1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,4,3,2,1));
-		ArrayList<Integer> lista2 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4));
-		Invertir(lista1);
+		ArrayList<Integer> lista1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,4,3,2,1,5));
+		ArrayList<Integer> lista2 = new ArrayList<Integer>(Arrays.asList(1, 2));
 		System.out.println(listaEspejo(lista1, lista2));
+		eliminar(lista1,lista2);
+		System.out.println(lista1);
 
 	}
 	
@@ -40,5 +42,20 @@ public class Ejercicio3y4{
 		
 		return es;
 	}
+	
+	//Ejercicio 5
+	
+	public static <E> void eliminar(ArrayList<E> L1, ArrayList<E> L2) {
+		Stack<E> p = new Stack<E>();
+		
+		L1.removeAll(L2);
+		
+		for(E elemento:L2) //Element iterator
+			p.push(elemento);
+			
+		L1.addAll(p);
+		
+	}
+	
 
 }
