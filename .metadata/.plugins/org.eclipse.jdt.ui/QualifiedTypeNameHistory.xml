@@ -3,8 +3,10 @@
     <fullyQualifiedTypeName name="ejemplo2.EmptyStackException"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="Excepciones.InvalidPositionException"/>
-    <fullyQualifiedTypeName name="Excepciones.EmptyListException"/>
     <fullyQualifiedTypeName name="Excepciones.BoundaryViolationException"/>
+    <fullyQualifiedTypeName name="Excepciones.EmptyListException"/>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="Excepciones.InvalidPositionException"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.security.InvalidKeyException"/>
 </qualifiedTypeNameHistroy>

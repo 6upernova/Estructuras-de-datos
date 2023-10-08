@@ -2,11 +2,11 @@ package listas;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 import Excepciones.BoundaryViolationException;
 import Excepciones.EmptyListException;
 import Excepciones.InvalidPositionException;
 
+//Esta clase es mi implementacion de la interface iterator que va a actuar sobre cualquier objeto que implemente la interfaze iterable
 public class ElementIterator<E> implements Iterator<E> {
 	
 	protected ListDE<E> l;

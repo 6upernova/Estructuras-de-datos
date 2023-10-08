@@ -1,6 +1,8 @@
 package listas;
 import java.util.Iterator;
+
 import Excepciones.*;
+
 
 public class ListDE<E> implements PositionList<E> {
 	
@@ -10,7 +12,7 @@ public class ListDE<E> implements PositionList<E> {
 
 	public ListDE() {
 		header = new Nodo<E> (null,null,null); 
-		treiler = new Nodo<E>	(null, header, null);
+		treiler = new Nodo<E>	(null, header, null); //siguiente, anterior, elememento
 		header.setSiguiente(treiler);
 		cantElem = 0;
 	}
@@ -70,6 +72,8 @@ public class ListDE<E> implements PositionList<E> {
 		Nodo<E> n;
 		if(p == null)
 			throw new InvalidPositionException("p es nulo");
+		if(p.element() == null)
+			throw new InvalidPositionException("No se puede crear un nodo con elemento nulos");
 		if(p == header || p == treiler)
 			throw new InvalidPositionException("P no es una posicion valida");
 		if(cantElem == 0)
@@ -145,6 +149,20 @@ public class ListDE<E> implements PositionList<E> {
 			}	
 		}
 		return l;	
+	}
+	
+	public void SegundoyAnteUltimo(E e1, E e2) throws EmptyListException {
+		if(isEmpty() || size()<2)
+			throw new EmptyListException("La lista esta vacia o no tiene los elemento necesarios para realizar esta operacion");
+		//Colocar e1 en la segunda posicion y e2 en la anteultima
+		try {
+			addAfter(first(), e1);
+			addBefore(last(), e2);
+		}
+		catch (InvalidPositionException | EmptyListException e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 }
 

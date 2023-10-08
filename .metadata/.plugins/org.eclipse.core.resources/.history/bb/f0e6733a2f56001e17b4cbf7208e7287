@@ -1,9 +1,0 @@
-package listas;
-
-public class ElementIterator<E> {
-
-	public ElementIterator() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

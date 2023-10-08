@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/noah/Documents/Estructuras-de-datos/Practico3/Ejercicio6"/>
 			<item value="/home/noah/Documents/Estructuras-de-datos"/>
 			<item value="C:\Users\noahk\OneDrive\Escritorio\USB-Noah\Estructuras-de-datos\TDAPila"/>
 			<item value="C:\Users\noahk\OneDrive\Escritorio\USB-Noah\Estructuras-de-datos\Practico1"/>
