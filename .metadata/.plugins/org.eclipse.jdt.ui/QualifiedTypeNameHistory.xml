@@ -7,6 +7,7 @@
     <fullyQualifiedTypeName name="Excepciones.EmptyListException"/>
     <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
     <fullyQualifiedTypeName name="Excepciones.InvalidPositionException"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="listas.PositionList"/>
     <fullyQualifiedTypeName name="java.security.InvalidKeyException"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
