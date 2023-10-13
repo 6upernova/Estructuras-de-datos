@@ -31,7 +31,7 @@ public class MapTest {
 
 	private Map<Integer, Integer> getMapeo() {
 
-		return new MapeoConLista<Integer, Integer>();
+		return new HashMap<Integer, Integer>();
 
 	}
 
