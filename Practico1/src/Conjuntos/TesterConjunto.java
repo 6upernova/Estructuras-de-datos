@@ -18,7 +18,7 @@ public class TesterConjunto {
 		conjunto13.put(10);
 		conjunto13.put(12);
 		conjunto13.put(3);
-		
+		System.out.println(conjunto13.pertenece(3,7));
 		mostrar(conjunto12.interseccion(conjunto13));
 	}
 	

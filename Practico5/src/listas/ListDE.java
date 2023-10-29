@@ -1,5 +1,6 @@
 package listas;
 import java.util.Iterator;
+
 import Excepciones.*;
 
 public class ListDE<E> implements PositionList<E> {

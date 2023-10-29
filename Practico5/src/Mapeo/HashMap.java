@@ -177,7 +177,6 @@ public class HashMap<K, V> implements Map<K,V> {
 			for(Entrada<K,V> e : p)
 				toret.addLast(e.getKey());
 		return toret;
-		
 	}
 
 	@Override
@@ -186,7 +185,8 @@ public class HashMap<K, V> implements Map<K,V> {
 		for(PositionList<Entrada<K,V>> p : buckets )
 			for(Entrada<K,V> e : p)
 				toret.addLast(e.getValue());
-		return toret;	}
+		return toret;	
+	}
 
 	@Override
 	public Iterable<Entry<K, V>> entries() {
@@ -194,6 +194,7 @@ public class HashMap<K, V> implements Map<K,V> {
 		for(PositionList<Entrada<K,V>> p : buckets )
 			for(Entrada<K,V> e : p)
 				toret.addLast(e);
-		return toret;	}
+		return toret;	
+	}
 
 }

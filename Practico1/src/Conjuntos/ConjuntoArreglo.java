@@ -42,6 +42,7 @@ public class ConjuntoArreglo<E> implements Conjunto<E>{
 	}
 	
 	public boolean pertenece(E elem, int n) {
+		//n = tamaño del conjunto
 		boolean esta=false;
 		//Caso base
 		if(n==0)
