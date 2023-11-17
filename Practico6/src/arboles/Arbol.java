@@ -223,7 +223,7 @@ public class Arbol<E> implements Tree<E> {
 			}
 		}
 		if(!esta)
-			throw new InvalidPositionException("El primer nodo no es el padre del segundo");
+			throw new InvalidPositionException("El primer nodo no es el padre del 'hijo' ");
 			
 		return toret;
 	}
@@ -332,5 +332,24 @@ public class Arbol<E> implements Tree<E> {
 			removeExternalNode(n);
 		
 	}
-
+	/**
+	Agregue un método a la clase arbol definida anteriormente cuya signatura sea:
+	public void eliminarUltimoHijo(Position<E> p) throws InvalidPositionException, InvalidOperationException.
+	Este método deberá eliminar del árbol receptor del mensaje a la posición p siempre que p sea el último hijo
+	(de izq a der) de su padre. La raíz no se considera último hijo, en este caso el método deberá lanzar
+	InvalidOperationException. 
+	*/
+	
+	public void eliminarUltimoHijo(Position<E> p) throws InvalidPositionException, InvalidOperationException {
+		Tnodo<E> n =checkposition(p);
+		if(this.size() == 1 || n.equals(raiz))
+			throw new InvalidOperationException("No se puede realizar esta operacion cuando solo existe 1 nodo o sobre el nodo raiz");
+		try {
+			if(n.getPadre().getHijos().last().equals(n))
+				removeNode(n);
+		} 
+		catch (EmptyListException | InvalidPositionException e) {
+			e.printStackTrace();
+		}
+	}
 }

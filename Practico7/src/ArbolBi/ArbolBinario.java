@@ -1,8 +1,9 @@
 package ArbolBi;
 
+import java.security.InvalidKeyException;
 import java.util.Iterator;
 
-
+import Diccionario.*;
 import Excepciones.BoundaryViolationException;
 import Excepciones.EmptyTreeException;
 import Excepciones.InvalidOperationException;
@@ -254,6 +255,45 @@ public class ArbolBinario<E> implements BinaryTree<E>  {
 		}
 		
 		
+	}
+	
+	/**
+	Ejercicio 2:
+	Agregue un método a la clase árbol binario programada en el inciso anterior tal que recorra el árbol en pre-orden y
+	retorne un diccionario donde sus entradas tengan como clave al rótulo del padre y como valor a los rótulos de cada
+	uno de sus hijos. Los rótulos ubicados en hojas del árbol no deben pertenecer al diccionario, de esta forma en el
+	diccionario no pueden existir valores nulos.
+	 */
+	
+	public Dictionary<E,E> DiccionarioRotulos() {
+		Dictionary<E,E> toret = new HashDictionary<E,E>();
+		if(raiz != null)
+			preordenDicc(raiz, toret);
+		return toret;
+		
+		
+		
+	}
+	
+	private void preordenDicc(Bnode<E> p, Dictionary<E,E> d) {
+		//visita
+		try {
+			if (isInternal(p) ) {
+				if(p.getHder() != null)
+					d.insert(p.element(),p.getHder().element());
+				if(p.getHizq() != null)
+					d.insert(p.element(),p.getHizq().element());
+			}
+		} 
+		catch (InvalidKeyException | InvalidPositionException e) {
+			e.printStackTrace();
+		}
+		
+		//Recorrer recursivamente todos los hijos
+		if(p.getHizq() != null)	
+			preordenDicc(p.getHizq(), d);
+		if(p.getHder() != null)
+			preordenDicc(p.getHder(), d);
 	}
 
 }

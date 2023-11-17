@@ -40,10 +40,6 @@ public class Nodo<E> implements Position<E> {
 		return anterior;
 	}
 	
-	public String toString() {
-		return "Position [Element() = " +element();
-	}
-	
 	
 
 }

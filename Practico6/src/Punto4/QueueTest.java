@@ -17,7 +17,7 @@ public class QueueTest {
 
 	private Queue<String> getQueue()
 	{
-	  return new ColaConPila<String>();
+	  return new ArrayQueue<String>();
 	 }
 	
 	@Before public void setUp()

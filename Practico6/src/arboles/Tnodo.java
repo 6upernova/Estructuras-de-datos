@@ -37,6 +37,9 @@ public class Tnodo<E> implements Position<E>{
 		this.padre = padre;
 	}
 	
+	public String toString() {
+		return " Tnodo[ element()= "+element()+", getPadre() = "+getPadre();
+	}
 	
 
 }

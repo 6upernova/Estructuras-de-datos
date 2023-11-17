@@ -1,8 +1,11 @@
 package Ejercicios;
 
 import java.security.InvalidKeyException;
+
 import java.util.Iterator;
 
+import Diccionario.Dictionary;
+import Diccionario.HashDictionary;
 import Mapeo.*;
 import listas.ListDE;
 import listas.PositionList;
@@ -11,6 +14,7 @@ public class Ejercio1 {
 
 
 	public static void main(String[] args) {
+		Dictionary<Integer, Integer> d3 = new  HashDictionary<Integer, Integer> ();
 		Map<Integer, Integer> m1 = new MapeoConLista<Integer, Integer>();
 		Map<Integer, Integer> m2 = new MapeoConLista<Integer, Integer>();
 		try {
@@ -21,17 +25,61 @@ public class Ejercio1 {
 	        m2.put(1, 25);
 	        m2.put(2, 30);
 	        m2.put(3, 40);
+	        
+	        d3.insert(1, 10);
+	        d3.insert(2, 20);
+	        d3.insert(3, 2);
+	        d3.insert(3, 2);
+	        d3.insert(3, 2);
+	        d3.insert(2, 33);
 		}
 		catch(InvalidKeyException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		System.out.println("Pasar en limpio(1-a)");
+		System.out.println();
+		
 		PositionList<Entry<Integer,Integer>> p = PasarEnLimpio(m1,m2);
 		for(Entry<Integer, Integer> e : p )
 			System.out.println(e.toString());
 		
 		System.out.println("---------------------------------------------------------------------------------------------");
 		
+		System.out.println("Esta Contenido(1-b)");
+		System.out.println();
+		
 		System.out.println(estaContenido(m1,m2));
+		
+		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		System.out.println("Acomodar (1-c)");
+		System.out.println();
+		
+		for(Diccionario.Entry<Integer, Integer> e : acomodar(d3).entries() )
+			System.out.println(e.toString());
+		
+		System.out.println("---------------------------------------------------------------------------------------------");
+		
+		System.out.println("Eliminar Todas(5-b)");
+		System.out.println();
+		
+		try {
+			for(Diccionario.Entry<Integer, Integer> e : d3.eliminarTodas(3,2) )
+				System.out.println(e.toString());
+		} catch (InvalidKeyException e1) {
+			
+			e1.printStackTrace();
+		}
+		
+		System.out.println("");
+		
+		for(Diccionario.Entry<Integer, Integer> e : d3.entries() )
+			System.out.println(e.toString());
+		
+		System.out.println("---------------------------------------------------------------------------------------------");
 		
 
 	}
@@ -92,6 +140,22 @@ public class Ejercio1 {
 	Por ejemplo: Si d = {(1,a), (2,b), (3,a), (2,c), (1,d), (4,b)}, entonces el diccionario resultante es dRes = {(1,d),
 	(2,c), (3,a) (4,b)}.
 	 */
+	
+	public static <K,V> Dictionary<K,V> acomodar (Dictionary<K,V> d) {
+		Dictionary<K,V> aux = new HashDictionary<K,V> ();
+		for(Diccionario.Entry<K, V> e : d.entries()) {
+			try {
+				if(aux.find(e.getKey()) == null)
+					aux.insert(e.getKey(), e.getValue());
+			} catch (InvalidKeyException e1) {
+				e1.printStackTrace();
+			}
+			
+		}
+		return aux;
+		
+	}
+
 	
 
 	
