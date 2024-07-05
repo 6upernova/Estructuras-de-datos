@@ -40,7 +40,6 @@ public class GrafoND<V, E> implements Graph<V, E> {
 		PositionList<Edge<E>> toret = new ListDE<Edge<E>>();
 		for(Arco<V,E> a : ve.getAdyacentes())
 			toret.addLast(a);
-		System.out.println(ve.getAdyacentes().size());
 		return toret;
 		
 	}

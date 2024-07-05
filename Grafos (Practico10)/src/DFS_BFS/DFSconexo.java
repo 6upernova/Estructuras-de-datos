@@ -1,9 +1,10 @@
 package DFS_BFS;
 import Excepciones.InvalidVertexException;
-import grafoNoDirigido.*;
-public class EsConexo<V,E>	{
 
-	public boolean Esconex(Graph<V, E> g) { // En esta implementacion cuando se termina de ejecutar void DFS volvera ciclo for del metodo anterior que lo llamo
+import grafoNoDirigido.*;
+public class DFSconexo<V,E>	{
+
+	public boolean Esconex(Graph<V, E> g) { // En esta implementacion cuando se termina de ejecutar void DFS volvera ciclo for del metodo DFSshell
 											// y si quedo algun vertice separado a los recorridos por dfs significa que el grafo es inconexo
 		return DFSshell(g);
 	}
